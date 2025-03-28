@@ -3,7 +3,7 @@ ARG CACHEBUST=1
 FROM python:3.11.7
 
 # Set the working directory
-WORKDIR /iodata_signal_fetcher-v1.0.1
+WORKDIR /iodata_signal_fetcher-v1.0.2
 
 # Copy the requirements file
 #COPY requirements.txt .
@@ -14,6 +14,7 @@ RUN python -m venv venv
 RUN venv/bin/pip install --upgrade pip
 RUN venv/bin/pip install paho.mqtt
 RUN venv/bin/pip install requests
+RUN venv/bin/pip install beautifulsoup4
 
 
 # Copy the app files
